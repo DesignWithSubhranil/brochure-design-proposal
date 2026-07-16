@@ -937,55 +937,64 @@ strong {
     radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
   pointer-events: none;
 }
-
 .footer-cta-inner {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-cta-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 700;
   font-style: italic;
   line-height: 1.05;
   color: var(--bg-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.footer-cta-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .footer-cta-desc {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  color: rgba(10, 10, 10, 0.7);
-  max-width: 640px;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: rgba(10, 10, 10, 0.85);
+  max-width: 720px;
   line-height: 1.6;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .footer-cta-buttons {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .cta-btn {
   display: inline-block;
-  padding: 0.85rem 1.5rem;
-  border: 1.5px solid var(--bg-primary);
-  color: var(--bg-primary);
+  padding: 1rem 2rem;
+  background: var(--bg-primary);
+  color: var(--accent);
+  border: none;
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .cta-btn:hover {
-  background: var(--bg-primary);
-  color: var(--accent);
+  background: #1a1a1a;
+  transform: translateY(-2px);
 }
 
 /* --- Footer End --- */
@@ -1224,21 +1233,21 @@ strong {
   }
 
   .row-type {
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
   }
 
   .row-desc {
     padding: 0;
-    font-size: 0.68rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    line-height: 1.45;
   }
 
   .row-price {
     text-align: left;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin-top: auto;
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
   }
 
   .row-highlight {
@@ -1254,25 +1263,29 @@ strong {
   }
 
   .footer-cta-band {
-    padding: 3.5rem 1.25rem;
+    padding: 4rem 1.25rem;
   }
 
   .footer-cta-title {
-    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    margin-bottom: 1.5rem;
   }
 
   .footer-cta-desc {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .footer-cta-buttons {
     flex-direction: column;
+    width: 100%;
   }
 
   .cta-btn {
     text-align: center;
-    font-size: 0.7rem;
-    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+    padding: 1rem 1.25rem;
+    width: 100%;
   }
 
   .footer {
