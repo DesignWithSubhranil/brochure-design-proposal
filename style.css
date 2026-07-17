@@ -603,7 +603,7 @@ strong {
 
 .table-header {
   display: grid;
-  grid-template-columns: 180px 1fr 180px;
+  grid-template-columns: 180px 1fr 140px 140px;
   padding: 1rem 1.5rem;
   background: var(--bg-elevated);
   border-bottom: 1px solid var(--border);
@@ -616,7 +616,7 @@ strong {
 
 .table-row {
   display: grid;
-  grid-template-columns: 180px 1fr 180px;
+  grid-template-columns: 180px 1fr 140px 140px;
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border);
   align-items: center;
@@ -665,7 +665,7 @@ strong {
 /* Estimate Cards */
 .estimate-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
@@ -1246,8 +1246,17 @@ strong {
   .row-price {
     text-align: left;
     font-size: 1.1rem;
-    margin-top: auto;
-    padding-top: 0.75rem;
+    margin-top: 0.25rem;
+    padding-top: 0.5rem;
+  }
+  
+  .row-price::before {
+    content: attr(data-label) ": ";
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-right: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .row-highlight {
